@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .hobby-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hobby-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px #ff6347;
+        }
+        .hobby-section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .hobby-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hobby-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .hobby-item:hover {
+            transform: translateY(-10px);
+        }
+.hobby-item img, .hobby-item video {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+}
+        .hobby-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .hobby-item h3 {
+            font-size: 24px;
+            margin: 15px 0;
+            color: #333;
+        }
+        .hobby-item p {
+            font-size: 16px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <section class="hobby-section">
+        <h2>My Hobbies</h2>
+        <p>Here are some of the activities I enjoy in my free time:</p>
+        <div class="hobby-list">
+            <div class="hobby-item">
+                <img src="image/bukit.jpg" alt="Photography">
+                <h3>Photography</h3>
+                <p>I love capturing moments and beautiful sceneries. Whether it's a bustling cityscape or a serene natural landscape, photography allows me to preserve the beauty of the world through my lens. Experimenting with different angles and lighting is always exciting.</p>
+            </div>
+            <div class="hobby-item">
+<img src="image/nash4.jpg" alt="Jogging">
+                <h3>Jogging</h3>
+                <p>Jogging is a great way to stay fit and clear my mind. I enjoy running through parks and along trails, enjoying the fresh air and nature. It's a wonderful way to start or end my day, giving me energy and a sense of accomplishment. It also good for enhance my strength and it gives me uninterrupted alone time .</p>
+<video controls>
+                    <source src="video/joging.mp4" type="video/mp4" width="100%" height="100%">
+Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hobby-item">
+                <img src="image/nash5.jpg" alt="Cooking">
+                <h3>Hiking</h3>
+                <p>Hiking allows me to explore the great outdoors and connect with nature. I love discovering new trails, reaching scenic viewpoints, and challenging myself with different terrains. It's a rewarding activity that keeps me physically active and mentally refreshed.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/reading.jpg" alt="Reading">
+                <h3>Reading</h3>
+                <p>Diving into different worlds through books is one of my favorite pastimes. I enjoy a variety of genres, from fiction and fantasy to science and history. Reading expands my knowledge, enhances my imagination, and provides a relaxing escape from reality.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

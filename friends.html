@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5e6ff;
+            margin: 0;
+            padding: 0;
+        }
+        .friends-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #d4b8ff;
+            border-top: 8px solid #8a2be2;
+            border-bottom: 8px solid #8a2be2;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .friends-section h2 {
+            font-size: 2.5em;
+            color: #4b0082;
+            margin-bottom: 20px;
+        }
+        .friends-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .friend {
+            background-color: #ffffff;
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 240px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .friend:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .friend img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #8a2be2;
+        }
+        .friend h3 {
+            font-size: 1.2em;
+            color: #4b0082;
+            margin: 10px 0;
+        }
+        .friend p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="friends-section">
+        <h2>My Friends</h2>
+<p class="description">
+            In the symphony of life, friends are the melodious notes that add harmony to our existence. They are the gentle breeze on a warm day, offering comfort and solace in times of need. With laughter as our chorus and tears as our refrain, we traverse the journey of life hand in hand. Here's to the cherished bonds, the shared adventures, and the endless memories that make friendship a timeless treasure.
+        </p>
+        <div class="friends-grid">
+            <div class="friend">
+                <img src="image/friend1.jpg" alt="Friend 1">
+                <h3>This is my friends at high school</h3>
+            </div>
+            <div class="friend">
+                <img src="image/friend2.jpg" alt="Friend 2">
+                <h3>At Cameron Highlands after PT3 exam</h3>
+            </div>
+            <div class="friend">
+                <img src="image/friend3.jpg" alt="Friend 3">
+                <h3>Form 4 before covid :)</h3>
+            </div>
+            <div class="friend">
+                <img src="image/friend4.jpg" alt="Friend 4">
+                <h3>Cave Explorer at Gunung Keriang</h3>
+            </div>
+            <div class="friend">
+                <img src="image/friend5.jpg" alt="Friend 5">
+                <h3>My only best friends</h3>
+            </div>
+            <div class="friend">
+                <img src="image/friend6.jpg" alt="Friend 6">
+                <h3>Entrance Gambang Waterpark</h3>
+            </div>
+            <!-- Add more friends as needed -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Section</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .family-section {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .family-section h2 {
+            color: #4A90E2;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .family-section p {
+            color: #777;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .family-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .member {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .member img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .member h3 {
+            margin-top: 10px;
+            color: #333;
+            font-size: 1.5em;
+        }
+        .member p {
+            color: #666;
+            font-size: 1em;
+        }
+        .slider {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 0;
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="family-section">
+    <h2>My Family</h2>
+    <p>Family is precious to me and i love them so much since i'm the only child in family. Each one of us contributes to the love, support, and fun that makes our family special. </p>
+    <div class="family-members">
+        <div class="member">
+            <img src="image/Nash1.jpg" alt="Member 1">
+            <h3>MUHAMMAD NASHRUL HAKIMIE BIN SUPARDI</h3>
+            <p>SON</p>
+        </div>
+        <div class="member">
+            <img src="image/Mom.jpg" alt="Member 2">
+            <h3>FARIDAH BINTI MAMAT</h3>
+            <p>MOTHER</p>
+        </div>
+        <div class="member">
+            <img src="image/Father.jpg" alt="Member 3">
+            <h3>SUPARDI BIN MAHILI</h3>
+            <p>FATHER</p>
+        </div>
+<h2>Eid Photo Gallery</h2>
+   <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                     <img src="image/eid5.jpg" alt="Friend 1">
+                <h3>Eid family photo</h3>
+                </div>
+                <div class="slide">
+                    <img src="image/eid2.jpg" alt="Friend 2">
+                     <h3>Eid family photo</h3>
+                </div>
+                <div class="slide">
+                    <img src="image/eid3.jpg" alt="Friend 3">
+                  <h3>Eid family photo</h3>
+                </div>
+                <div class="slide">
+                    <img src="image/eid4.jpg" alt="Friend 4">
+                   <h3>Eid family photo</h3>
+                </div>
+                <div class="slide">
+                    <img src="image/eid6.jpg" alt="Friend 5">
+                   <h3>Eid family photo</h3>
+                </div>
+                <div class="slide">
+                    <img src="image/eid7.jpg" alt="Friend 6">
+                    <h3>Eid family photo</h3>
+                </div>
+              
+                <!-- Add more friends as needed -->
+            </div>
+            <div class="slider-buttons">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            const slideWidth = slides.children[0].getBoundingClientRect().width;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        window.addEventListener('resize', () => {
+            const slides = document.querySelector('.slides');
+            const slideWidth = slides.children[0].getBoundingClientRect().width;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        });
+    </script>
+   
+    </div>
+</div>
+
+</body>
+</html>
